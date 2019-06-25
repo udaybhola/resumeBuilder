@@ -1,0 +1,40 @@
+<div style="background-color:currentColor;width:auto;padding:15px;"  [ngSwitch]='froalaId' >
+  <br>
+  <div class="container">
+    <br>
+   <div class="jumbotron" *ngFor="let education of educationDetails;let i=index">
+     <h4>School #{{i+1}}</h4>
+     <table>
+       <tr>
+         <td><h5 >Qualification</h5></td>&nbsp;&nbsp;&nbsp;
+         <td><h6 [froalaEditor]='options' [(froalaModel)]="educationDetails[i].Qualification"></h6></td>&nbsp;&nbsp;
+         
+       </tr>
+      
+       <tr>
+          <td><h5>School/College Name</h5></td>&nbsp;&nbsp;&nbsp;
+          <td><h6 [froalaEditor]="options" [(froalaModel)]="educationDetails[i].schoolName"></h6></td>
+       </tr>
+       <tr>
+          <td><h5>Year Of passing</h5></td>&nbsp;&nbsp;&nbsp;
+          <td><h6 [froalaEditor]="options" [(froalaModel)]="educationDetails[i].yearOfPassing">Percentage/CGPA</h6></td>
+       </tr>
+       <tr>
+          <td><h5>Percentage/CGPA</h5></td>&nbsp;&nbsp;&nbsp;
+          <td><h6  [froalaEditor]="options" [(froalaModel)]="educationDetails[i].Marks">Percentage/CGPA</h6></td>
+       </tr>
+     </table>
+   </div>
+
+     <div class="container-fluid text-center" id="newschool"> 
+        <button type="button" class="btn btn-default" style="width:auto"(click)=" onAddDetails()">
+            Add New School
+          </button>
+          <button type="button" class="btn btn-default" style="width:auto" (click)=" onRemoveDetails()">
+            Remove Last School
+            </button>
+   </div>
+  <br>
+   
+  </div>
+</div>

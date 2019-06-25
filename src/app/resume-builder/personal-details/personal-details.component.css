@@ -1,0 +1,39 @@
+.inputbox {
+
+  background: rgba(204, 204, 195, 0.897);
+  width: 400px;
+ overflow: hidden;
+  height: 38 px;
+  
+}
+
+.inputbox1 {
+
+  background: rgba(204, 204, 195, 0.897);
+  width: auto;
+  height: 38px;
+  overflow: hidden;
+}
+.inputbox2 {
+
+    background: rgba(204, 204, 195, 0.897);
+    width:auto;
+    height: 38px;
+    padding-right:10px;
+    overflow: hidden;
+  }
+.jumbotron {
+ 
+  padding-top:20px;
+}
+.jumbotron.jumbotron-fluid {
+  
+    width: 200px;
+    height: 100%;
+    padding: 5px;
+  }
+  #infoclass
+  {
+    
+      background-color: white;
+  }

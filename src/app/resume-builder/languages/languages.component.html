@@ -1,0 +1,29 @@
+<div style="background-color:currentColor;width:auto;padding:15px;"  [ngSwitch]='froalaId' >
+    <br>
+    <div class="container">
+      <div class="jumbotron">
+        <table  *ngFor="let language of languages;let i=index">
+          <tr><td>
+              <h5>Language Known #{{i+1}} :</h5>
+          </td> 
+          &nbsp;
+          &nbsp;&nbsp;
+            <td>
+                <h5 [froalaEditor]="options" [(froalaModel)]="languages[i]"></h5>
+            </td>
+          </tr>
+        </table>
+      </div>
+    
+          <div class="container-fluid text-center" id="newschool"> 
+             <button type="button" class="btn btn-default" style="width:auto"(click)=" onAddDetails()">
+                 Add New Language
+               </button>
+               <button type="button" class="btn btn-default" style="width:auto" (click)=" onRemoveDetails()">
+                 Remove Last Language
+                 </button>
+        </div>
+       <br>
+      </div>
+      </div>
+     

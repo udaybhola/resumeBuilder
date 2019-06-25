@@ -1,0 +1,27 @@
+<div style="background-color:currentColor;width:auto;padding:15px;"  [ngSwitch]='froalaId' >
+    <div class="container">
+      <div class="jumbotron">
+        <table  *ngFor="let skill of skills;let i=index">
+          <tr><td>
+              <h5>Skill #{{i+1}} :</h5>
+          </td> 
+          &nbsp;
+          &nbsp;&nbsp;
+            <td>
+                <h5 [froalaEditor]="options" [(froalaModel)]="skills[i].name"></h5>
+            </td>
+          </tr>
+        </table>
+      </div>
+     
+          <div class="container-fluid text-center" id="newschool"> 
+             <button type="button" class="btn btn-default" style="width:auto"(click)=" onAddDetails()">
+                 Add New Skill
+               </button>
+               <button type="button" class="btn btn-default" style="width:auto" (click)=" onRemoveDetails()">
+                 Remove Last Skill
+                 </button>
+        </div>
+       <br>
+      </div>
+      </div>

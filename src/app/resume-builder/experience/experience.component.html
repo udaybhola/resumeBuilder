@@ -1,0 +1,40 @@
+<div style="background-color:currentColor;width:auto;padding:15px;"  [ngSwitch]='froalaId' >
+<br>
+    <div class="container">
+      <br>
+     <div class="jumbotron" *ngFor="let experience of experiences;let i=index">
+       <h4>Experience #{{i+1}}</h4>
+       <table >
+         <tr>
+           <td><h5 >Designation</h5></td>&nbsp;&nbsp;&nbsp;
+           <td><h6 [froalaEditor]="options" [(froalaModel)]="experiences[i].designation"></h6></td>&nbsp;&nbsp;
+           
+         </tr>
+        
+         <tr>
+            <td><h5>Company Name</h5></td>&nbsp;&nbsp;&nbsp;
+            <td><h6 [froalaEditor]="options" [(froalaModel)]="experiences[i].company"></h6></td>
+         </tr>
+         <tr>
+            <td><h5>Duration</h5></td>&nbsp;&nbsp;&nbsp;
+            <td><h6 [froalaEditor]="options" [(froalaModel)]="experiences[i].duration">Percentage/CGPA</h6></td>
+         </tr>
+         <tr>
+            <td><h5>Description</h5></td>&nbsp;&nbsp;&nbsp;
+            <td><h6  [froalaEditor]="options" [(froalaModel)]="experiences[i].details">Percentage/CGPA</h6></td>
+         </tr>
+       </table>
+     </div>
+       <div class="container-fluid text-center" id="newschool"> 
+          <button type="button" class="btn btn-default" style="width:auto"(click)=" onAddDetails()">
+              Add New Experience
+            </button>
+            <button type="button" class="btn btn-default" style="width:auto" (click)=" onRemoveDetails()">
+              Remove Last Experience
+              </button>
+     </div>
+    <br>
+     
+    </div>
+  </div>
+ 
